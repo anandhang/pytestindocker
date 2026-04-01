@@ -10,7 +10,6 @@ def ping():
 def add():
     data = request.get_json(silent=True)
     print("DEBUG: received data:", data)
-    print("DEBUG: received data:", data)
     if not data or "a" not in data or "b" not in data:
         return jsonify({"error": "Invalid input"}), 400
     try:
